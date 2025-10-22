@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedifyAlert - Contacto</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar-custom">
+        <ul>
+            <li><a href="index.html#Inicio">Inicio</a></li>
+            <li><a href="index.html#Informacion">Información</a></li>
+            <li><a href="index.html#Registro">Registro</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <div class="contacto-container">
+        <h2>Contáctanos</h2>
+        <form action="https://formspree.io/f/mgvnzoyv" method="POST" class="formulario-contacto">
+
+            <label for="name">Escriba su Nombre</label>
+            <input type="text" name="name" id="name" placeholder="Nombre (Obligatorio)" required>
+
+            <label for="name">Segundo nombre</label>
+            <input type="text" name="secondname" id="secondname" placeholder="Segundo Nombre(opcional)" >
+
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Apellido(Obligatorio)" required>
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" name="telefono" id="telefono" placeholder="Teléfono (Opcional)" >
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email (Obligatorio)" required>
+
+            <label for="message">Mensaje</label>
+            <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
+              <div class="mb-3">
+            <!-- Contenedor vacío para el captcha -->
+            <div id="captcha-container"></div>
+            <p id="captcha-error" style="color: red; font-size: 14px;"></p>
+        </div>
+
+            <input class="btn" type="submit" value="Enviar">
+
+        </form>
+    </div>
+
+     <div class="footer">
+  <p>Copyright© 2025 - MedifyAlert</p>
+
+</div>
+
+<script>
+  // Función que se llama cuando el captcha se marca correctamente
+  function captchaVerified() {
+    const errorText = document.getElementById('captcha-error');
+    errorText.textContent = ''; // limpia el mensaje de error
+  }
+
+  // Función que se llama cuando el script de Google carga
+  var onloadCallback = function() {
+    grecaptcha.render('captcha-container', {
+      'sitekey': '6LeP9OcrAAAAALihnmUinQSOp6Ul498UfVOrNke_',
+      'callback': captchaVerified
+    });
+  };
+
+  // Validación al enviar el formulario
+  document.querySelector('.formulario-contacto').addEventListener('submit', function(e) {
+    const captcha = grecaptcha.getResponse();
+    const errorText = document.getElementById('captcha-error');
+
+    if (!captcha || captcha.length === 0) {
+      e.preventDefault(); // Detiene el envío
+      errorText.textContent = '⚠️ Por favor, verifica que no eres un robot antes de enviar el formulario.';
+      return false;
+    } else {
+      errorText.textContent = ''; // limpia el mensaje cuando sí se marca el captcha
+    }
+  });
+</script>
+
+
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

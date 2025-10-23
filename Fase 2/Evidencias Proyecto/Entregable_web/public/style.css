@@ -141,21 +141,21 @@ h1 .icono {
 }
 
 #Contacto .carousel-inner {
-    max-height: 350px;       /* altura máxima del carrusel */
+    max-height: 350px;       
     border-radius: 10px;
     overflow: hidden;
     margin-top: 20px;
-    background-color: #000;  /* 👈 fondo negro para cuando la imagen no llena */
+    background-color: #000;  
     display: flex;
-    align-items: center;     /* centra la imagen verticalmente */
-    justify-content: center; /* centra la imagen horizontalmente */
+    align-items: center;    
+    justify-content: center; 
 }
 #Contacto img {
-    max-height: 350px;       /* 👈 se ajusta a la altura del carrusel */
-    width: auto;             /* ancho automático */
-    object-fit: contain;     /* 👈 ahora se ve la imagen entera sin recortar */
-    margin: auto;            /* centrada */
-    background-color: #000;  /* 👈 relleno negro */
+    max-height: 350px;       
+    width: auto;             
+    object-fit: contain;     
+    margin: auto;            
+    background-color: #000;  
 }
 
 
@@ -168,15 +168,15 @@ h1 .icono {
     text-decoration: none;
     color: #fff;
     border-radius: 50px;
-    background: linear-gradient(135deg, #4e54c8, #8f94fb); /* degradado moderno */
+    background: linear-gradient(135deg, #4e54c8, #8f94fb); 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
 
 .boton-redireccion:hover {
-    transform: translateY(-3px); /* se eleva un poco */
-    background: linear-gradient(135deg, #8f94fb, #4e54c8); /* invierte colores */
+    transform: translateY(-3px); 
+    background: linear-gradient(135deg, #8f94fb, #4e54c8);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
@@ -185,7 +185,7 @@ h1 .icono {
 
 .contacto-container {
     max-width: 600px;
-    margin: 120px auto; /* baja el formulario  */
+    margin: 120px auto; 
     padding: 30px;
     background: rgba(163, 189, 228, 0.9);
     border-radius: 12px;
@@ -251,7 +251,7 @@ h1 .icono {
   background-color: #2128a7;
   background-size: 1400% 1400%;
  
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.3); /* sombra arriba del footer */
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3); 
 }
 
 

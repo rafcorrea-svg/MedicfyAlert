@@ -1,7 +1,7 @@
 
 body {
     
-    /* Degradado + imagen más visible */
+    
     background: 
         linear-gradient(rgba(227, 242, 253, 0.5), rgba(252, 228, 236, 0.5)),
         url("fondo.jpg") no-repeat center center fixed;
@@ -13,7 +13,7 @@ body {
 
 
 
-/* ==== NAVBAR PERSONALIZADA ==== */
+
 .navbar-custom {
     position: fixed;
     top: 20px;
@@ -55,12 +55,12 @@ html {
 }
 
 
-/* ==== SCROLL SUAVE ==== */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* ==== CONTENEDORES ==== */
+
 .contenedor {
     text-align: center;
     padding: 30px;
@@ -76,7 +76,7 @@ html {
     transform: scale(1.02);
 }
 
-/* ==== BOTONES ==== */
+
 .boton-redireccion {
     background-color: blue;
     color: white;
@@ -92,7 +92,7 @@ html {
     background-color: darkblue;
 }
 
-/* ==== TÍTULOS ==== */
+
 h1 {
     display: flex;
     align-items: center;
@@ -107,7 +107,7 @@ h1 .icono {
     object-fit: cover;
 }
 
-/* ==== COLORES SECCIONES ==== */
+
 #Inicio {
     background-color: rgb(177, 221, 238);
 }
@@ -128,7 +128,7 @@ h1 .icono {
     background-color: rgb(238, 221, 229);;
 }
 
-/* ==== CARRUSEL ==== */
+
 #Nosotros .carousel-inner {
     max-height: 350px;
     border-radius: 10px;
@@ -159,7 +159,7 @@ h1 .icono {
 }
 
 
-/* ==== BOTONES PERSONALIZADOS ==== */
+
 .boton-redireccion {
     display: inline-block;
     padding: 12px 28px;
@@ -173,7 +173,7 @@ h1 .icono {
     transition: all 0.3s ease;
 }
 
-/* Efecto hover */
+
 .boton-redireccion:hover {
     transform: translateY(-3px); /* se eleva un poco */
     background: linear-gradient(135deg, #8f94fb, #4e54c8); /* invierte colores */
@@ -182,7 +182,7 @@ h1 .icono {
 
 
 
-/* ==== FORMULARIO CONTACTO y sus estilos ==== */
+
 .contacto-container {
     max-width: 600px;
     margin: 120px auto; /* baja el formulario  */
@@ -257,7 +257,7 @@ h1 .icono {
 
 
 
-/* Chatbot */
+
 #chatContainer {
     position: fixed;
     bottom: 20px;
